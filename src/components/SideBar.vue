@@ -15,7 +15,7 @@
             <v-list-item-group v-model="selectItem">
                 <v-list-item v-for="(item,i) in items" :key="i" active-class="border" v-slot="{active}" :ripple="false">
                     <v-list-item-icon>
-                        <v-icon v-text="item.icon" :color="active ? 'black' : '#7C7C7F'"></v-icon>
+                      <router-link style="color: transparent" to="/about"><v-icon v-text="item.icon" :color="active ? 'black' : '#7C7C7F'"></v-icon></router-link>
                     </v-list-item-icon>
                 </v-list-item>
             </v-list-item-group>
@@ -29,13 +29,12 @@ data: () => ({
     selectItem: 3,
     drawer: null,
     items: [
-        {icon: 'fas fa-tv'},
-        {icon: 'far fa-building'},
-        {icon: 'far fa-compass'},
-        {icon: 'far fa-folder-open'},
-        {icon: 'far fa-clock'},
+        {icon: 'far fa-trash-alt'},
+        {icon: 'mdi-cog'},
         {icon: 'far fa-bell'},
+        {icon: 'far fa-calendar-alt'},
         {icon: 'far fa-address-book'},
+        {icon: 'mdi-information-outline'},
     ],
 })
 }
